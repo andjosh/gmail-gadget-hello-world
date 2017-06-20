@@ -33,9 +33,9 @@ end
 
 namespace :gadget do
   task :prepare do |task|
-    @in_path   = task.scope.last
+    @in_path   = "gadget"
     @out_path  = "build/#{@in_path}"
-    @js_files  = vendor_js_files + %W(src/gadgetize.js #{@in_path}/main.js)
+    @js_files  = vendor_js_files + %W(#{@in_path}/main.js)
     @css_files = %W(#{@in_path}/style.css)
   end
 
